@@ -14,21 +14,24 @@ $(document).ready(function(){
 
 	/*
 	* $.ajax();
+	* type: GET method
 	*/
-
-	$.ajax({
-		url: "http://www.example.com/api/v1/server-document",
-		dataType: "jsonp"
-		data: {
-			format: "json"
-		},
-		error: function(msg){
-			$('.err-msg').html('<h3>Something happened: ' + msg +'.</h3>');
-		},
-		success: function(data){
-			// Do something with the returned data.
-		},
-		type: "GET"
+	$('#some-button').click(function(){ //select the target button
+		$.ajax({
+			url: "http://www.example.com/api/v1/server-document",
+			dataType: "jsonp"
+			data: {
+				format: "json"
+			},
+			error: function(msg){
+				// Handle errors here.
+			},
+			success: function(data){
+				// Do something with the returned data.
+			},
+			type: "GET"
+		});
 	});
+	
 
 });
