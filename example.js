@@ -1,4 +1,7 @@
+
+// basic way to use jquery.nicescroll 
 (function(){
-	niceScroll();
+	
+	$('html').niceScroll();
 	
 });
